@@ -156,7 +156,7 @@ export const useDntelForm = (initialData: FormData, id?: string): UseDntelForm =
 
     return (
       <div className="p-4">
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap ">
           {data.map((section) => {
             let layoutClass = '';
             if (section.layout === 'full') {
@@ -169,9 +169,10 @@ export const useDntelForm = (initialData: FormData, id?: string): UseDntelForm =
               <div
                 key={section.order}
                 id={`section-${section.order}`}
-                className={`h-fit box-border p-6 rounded-lg text-green-900 ${layoutClass}`}
-                style={{ background: section.bgColor }}
+                className={` p-6  ${layoutClass}`}
+                
               >
+                <div style={{ background: section.bgColor }} className={`h-fit p-6 box-border rounded-lg text-green-900`}>
                 <div className="flex justify-between w-full">
                   <h2 className="text-lg font-semibold mb-2">
                     {section.title} ({section.stats.filled}/{section.stats.total})
@@ -237,10 +238,12 @@ export const useDntelForm = (initialData: FormData, id?: string): UseDntelForm =
                             </div>
                           )}
                         </div>
+                        
                       </div>
                     );
                   })}
                 </ul>
+              </div>
               </div>
             );
           })}
