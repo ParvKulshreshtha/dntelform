@@ -54,7 +54,6 @@ const Navigation: React.FC<NavigationProps> = ({
                 className='px-4 py-1 bg-white rounded-md hover:bg-green-800 hover:text-white shadow-md focus:outline-none'
                 onClick={reset}
               >
-                {/* You can put an icon or label here */}
               </button>
               <button 
                 className='px-4 py-1 bg-white rounded-md hover:bg-green-800 hover:text-white shadow-md focus:outline-none'
